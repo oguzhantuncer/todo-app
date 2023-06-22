@@ -11,13 +11,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "todos")
-public class TodoEntity {
+public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
     @Column(name = "status")
+    @Enumerated(value = EnumType.STRING)
     private TodoStatus status;
     @Column(name = "content")
     private String content;
