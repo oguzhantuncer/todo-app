@@ -5,6 +5,8 @@ import com.oguzhantuncer.todo.model.request.TodoRequest;
 import com.oguzhantuncer.todo.repository.TodoRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TodoService {
 
@@ -19,5 +21,14 @@ public class TodoService {
         todo.setContent(request.getContent());
         todo.setStatus(request.getStatus());
         todoRepository.save(todo);
+    }
+
+    public List<Todo> findAll() {
+        return todoRepository.findAll();
+    }
+
+
+    public void deleteTodo(Long id) {
+        todoRepository.deleteById(id);
     }
 }
