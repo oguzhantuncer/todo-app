@@ -16,11 +16,11 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public void save(TodoRequest request) {
+    public Todo save(TodoRequest request) {
         Todo todo = new Todo();
         todo.setContent(request.getContent());
         todo.setStatus(request.getStatus());
-        todoRepository.save(todo);
+        return todoRepository.save(todo);
     }
 
     public List<Todo> findAll() {
@@ -30,5 +30,12 @@ public class TodoService {
 
     public void deleteTodo(Long id) {
         todoRepository.deleteById(id);
+    }
+
+    public Todo update(TodoRequest request,Long id) {
+        Todo todo = todoRepository.findById(id).get();
+        todo.setContent(request.getContent());
+        todo.setStatus(request.getStatus());
+        return todoRepository.save(todo);
     }
 }
