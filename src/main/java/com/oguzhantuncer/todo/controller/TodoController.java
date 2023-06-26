@@ -38,6 +38,11 @@ public class TodoController {
         todoService.deleteAll();
     }
 
+    @DeleteMapping
+    public void deleteAllDone(){
+        todoService.deleteAllDone();
+    }
+
     @PutMapping("/{id}")
     private Todo update(@RequestBody TodoRequest request, @PathVariable Long id){
         return todoService.update(request,id);

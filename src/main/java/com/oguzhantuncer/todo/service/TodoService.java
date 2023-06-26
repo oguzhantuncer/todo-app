@@ -43,4 +43,7 @@ public class TodoService {
     public void deleteAll() {
         todoRepository.deleteAll();
     }
+
+    public void deleteAllDone() {
+    }
 }
