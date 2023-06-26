@@ -1,6 +1,7 @@
 package com.oguzhantuncer.todo.service;
 
 import com.oguzhantuncer.todo.model.entity.Todo;
+import com.oguzhantuncer.todo.model.enums.TodoStatus;
 import com.oguzhantuncer.todo.model.request.TodoRequest;
 import com.oguzhantuncer.todo.repository.TodoRepository;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ public class TodoService {
     public Todo save(TodoRequest request) {
         Todo todo = new Todo();
         todo.setContent(request.getContent());
-        todo.setStatus(request.getStatus());
+        todo.setStatus(TodoStatus.NOT_COMPLETED);
         return todoRepository.save(todo);
     }
 
@@ -37,5 +38,9 @@ public class TodoService {
         todo.setContent(request.getContent());
         todo.setStatus(request.getStatus());
         return todoRepository.save(todo);
+    }
+
+    public void deleteAll() {
+        todoRepository.deleteAll();
     }
 }
