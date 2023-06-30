@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TodoRequest {
-    private String content;
+    private String name;
     private TodoStatus status;
 }

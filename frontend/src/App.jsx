@@ -1,48 +1,54 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import service from './service'
+
+import TodoItem from './components/TodoItem';
+
 import './App.css';
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
 
 function App() {
 
-  const [todo, setInputValue] = useState('');
+  const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
 
-
   useEffect(() => {
-    try {
-      axios.get('/todo')
-        .then((response) => {
-          setTodos(response.data);
-          debugger;
-        });
-    } catch (error) {
-      console.error("Istek hatasi", error);
-    }
-  })
+    service.getAll()
+      .then(response => {
+        setTodos(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    setTodo(event.target.value);
   };
 
   const addNewTodo = async () => {
     try {
-      axios.post('/todo', {
-        content: todo
-      })
-        .then((response) => {
-          console.log(response);
+      await service.create({name:todo})
+
+      service.getAll()
+        .then(response => {
+          setTodos(response.data);
+        })
+        .catch(error => {
+          console.error(error);
         });
+      setTodo('');
     } catch (error) {
       console.error("Istek hatasi", error);
     }
   }
 
   const listItems = todos.map(todo =>
-    <li className="list-group-item">{todo.content} - {todo.id} - {todo.status}</li>
+    <TodoItem
+      key={todo.id}
+      id={todo.id}
+      name={todo.name}
+      status={todo.status}
+    />
   );
-
 
   return (
     <div className="App">
@@ -61,10 +67,14 @@ function App() {
             <ul className="list-group">
               {listItems}
             </ul>
-            <div className='gap-2'>
-              <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-              <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-            </div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='d-grid gap-2 col-6 mx-auto'>
+            <button class="btn btn-danger" type="button">Delete done tasks</button>
+          </div>
+          <div className='d-grid gap-2 col-6 mx-auto'>
+            <button class="btn btn-danger" type="button">Delete all tasks</button>
           </div>
         </div>
       </div>
