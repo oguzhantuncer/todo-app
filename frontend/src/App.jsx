@@ -3,7 +3,6 @@ import service from './service'
 
 import TodoItem from './components/TodoItem';
 
-import './App.css';
 
 function App() {
 
@@ -38,6 +37,12 @@ function App() {
       setTodo('');
     } catch (error) {
       console.error(error);
+    }
+  }
+
+  const handleKeyDown = async (event) => {
+    if (event.key === 'Enter') {
+      addNewTodo();
     }
   }
 
@@ -122,10 +127,10 @@ function App() {
       
         <div className="row">
           <div className="col">
-            <h2 className="mt-5" >TodoInput</h2>
+            <h2 className="mt-5">TodoInput</h2>
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">@</span>
-              <input type="text" className="form-control" placeholder="New Todo" value={todo} onChange={handleInputChange} />
+              <input type="text" className="form-control" placeholder="New Todo" value={todo} onChange={handleInputChange} onKeyDown={handleKeyDown}/>
             </div>
             <div className="d-grid gap-2">
               <button onClick={addNewTodo} className="btn btn-info" type="button">Add New Task</button>
@@ -134,9 +139,9 @@ function App() {
         </div>        
         <div className="row">
           <div className="col">
-            <h2 className="mt-5" >TodoList</h2>
+            <h2 className="mt-5">TodoList</h2>
 
-            <div className="row mt-3">
+            <div className='row mt-3'>
               <div className='d-grid gap-2 col-4 mx-auto'>
                 <button class="btn btn-primary" type="button" onClick={handleGetAllButton}>All</button>
               </div>

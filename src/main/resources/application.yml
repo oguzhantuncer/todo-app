@@ -12,6 +12,7 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
   messages:
     basename: messages/messages
+
 logging:
   file:
     name: ./log/app.log
