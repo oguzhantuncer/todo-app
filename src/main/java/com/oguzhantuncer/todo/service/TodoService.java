@@ -35,7 +35,7 @@ public class TodoService {
         return todoRepository.save(todo);
     }
 
-    public Todo update(TodoRequest request, Long id) {
+    public Todo update(Long id, TodoRequest request) {
         log.info("TodoService.update() triggered for this id: {} and request: {}", id, request);
         Optional<Todo> byId = todoRepository.findById(id);
         if (byId.isEmpty()) {
