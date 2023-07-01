@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    image: mysql:latest
+    image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: todo
@@ -12,9 +12,7 @@ services:
   app:
     depends_on:
       - db
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    image: todo-app
     restart: on-failure
     ports:
       - "8080:8080"

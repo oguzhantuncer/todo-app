@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://db:3306/todo
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  messages:
+    basename: messages/messages
+
+logging:
+  file:
+    name: ./log/app.log
+  level:
+    org:
+      springframework:
+        web: INFO
+    hibernate: ERROR
+    root: INFO
