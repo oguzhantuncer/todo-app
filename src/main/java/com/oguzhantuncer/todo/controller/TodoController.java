@@ -36,14 +36,19 @@ public class TodoController {
         return todoService.findAll();
     }
 
-    @GetMapping("/done")
-    public List<Todo> getAllDone(){
+    @GetMapping("/completed")
+    public List<Todo> getAllCompleted(){
         return todoService.findAllCompleted();
+    }
+
+    @GetMapping("/not-completed")
+    public List<Todo> getAllNotCompleted(){
+        return todoService.findAllNotCompleted();
     }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id){
-        todoService.deleteTodo(id);
+        todoService.delete(id);
     }
 
     @DeleteMapping
@@ -53,6 +58,6 @@ public class TodoController {
 
     @DeleteMapping("/completed")
     public void deleteAllDone(){
-        todoService.deleteAllDone();
+        todoService.deleteAllCompleted();
     }
 }

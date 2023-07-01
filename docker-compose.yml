@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: todo
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    networks:
+      - todo-network
+  app:
+    depends_on:
+      - db
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    networks:
+      - todo-network
+networks:
+  todo-network:
+    driver: bridge

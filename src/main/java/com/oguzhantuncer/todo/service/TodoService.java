@@ -54,23 +54,31 @@ public class TodoService {
         return todoRepository.findAll();
     }
 
-    public List<Todo> findAllCompleted() {
-        return todoRepository.findAllByStatus(TodoStatus.COMPLETED);
-    }
-
-
-    public void deleteTodo(Long id) {
+    public void delete(Long id) {
+        log.info("TodoService.delete() triggered for this id: {}", id);
         todoRepository.deleteById(id);
     }
 
     @Transactional
     public void deleteAll() {
+        log.info("TodoService.deleteAll() triggered");
         todoRepository.deleteAll();
     }
 
     @Transactional
-    public void deleteAllDone() {
+    public void deleteAllCompleted() {
+        log.info("TodoService.deleteAllCompleted() triggered");
         todoRepository.deleteByStatus(TodoStatus.COMPLETED);
+    }
+
+    public List<Todo> findAllCompleted() {
+        log.info("TodoService.findAllCompleted() triggered");
+        return todoRepository.findAllByStatus(TodoStatus.COMPLETED);
+    }
+
+    public List<Todo> findAllNotCompleted() {
+        log.info("TodoService.findAllNotCompleted() triggered");
+        return todoRepository.findAllByStatus(TodoStatus.NOT_COMPLETED);
     }
 }
 
