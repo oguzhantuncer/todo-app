@@ -1,513 +1,199 @@
-2023-07-01T00:09:12.285+03:00  INFO 3037 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 3037 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
-2023-07-01T00:09:12.289+03:00  INFO 3037 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-07-01T00:09:12.351+03:00  INFO 3037 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-01T00:09:12.352+03:00  INFO 3037 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-01T00:09:13.239+03:00  INFO 3037 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-01T00:09:13.317+03:00  INFO 3037 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interfaces.
-2023-07-01T00:09:14.002+03:00  INFO 3037 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-07-01T00:09:14.015+03:00  INFO 3037 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-01T00:09:14.016+03:00  INFO 3037 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-01T00:09:14.081+03:00  INFO 3037 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-01T00:09:14.081+03:00  INFO 3037 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1728 ms
-2023-07-01T00:09:14.118+03:00  INFO 3037 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-01T00:09:14.477+03:00  INFO 3037 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4308d2d2
-2023-07-01T00:09:14.479+03:00  INFO 3037 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-01T00:09:14.488+03:00  INFO 3037 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/todo'
-2023-07-01T00:09:14.633+03:00  INFO 3037 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-01T00:09:14.726+03:00  INFO 3037 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-01T00:09:14.731+03:00  INFO 3037 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-01T00:09:14.931+03:00  INFO 3037 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T00:09:15.119+03:00  INFO 3037 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-01T00:09:15.436+03:00  INFO 3037 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T00:09:16.205+03:00  INFO 3037 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-01T00:09:16.295+03:00  INFO 3037 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T00:09:16.862+03:00  WARN 3037 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-01T00:09:17.588+03:00  INFO 3037 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-01T00:09:17.626+03:00  INFO 3037 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-07-01T00:09:17.636+03:00  INFO 3037 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 5.96 seconds (process running for 6.648)
-2023-07-01T00:10:10.450+03:00  INFO 3037 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-01T00:10:10.450+03:00  INFO 3037 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-01T00:10:10.455+03:00  INFO 3037 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2023-07-01T00:10:10.565+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:10:10.948+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:10:27.944+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:10:27.966+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:10:39.932+03:00  WARN 3037 --- [http-nio-8080-exec-2] o.s.core.utils.PropertyResolverUtils     : Could not resolve placeholder 'Spring.application.name' in value "${Spring.application.name}"
-2023-07-01T00:10:40.309+03:00  INFO 3037 --- [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 422 ms
-2023-07-01T00:12:43.960+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=null, status=NOT_COMPLETED)
-2023-07-01T00:12:44.023+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=null)
-2023-07-01T00:13:00.427+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java öğrenilecek, status=NOT_COMPLETED)
-2023-07-01T00:13:00.453+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java öğrenilecek)
-2023-07-01T00:13:21.777+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:13:52.893+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=null, status=COMPLETED)
-2023-07-01T00:13:52.914+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=null, status=COMPLETED)
-2023-07-01T00:14:57.830+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=null, status=COMPLETED)
-2023-07-01T00:14:57.844+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=null, status=COMPLETED)
-2023-07-01T00:15:02.714+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=null, status=COMPLETED)
-2023-07-01T00:15:02.730+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=null, status=COMPLETED)
-2023-07-01T00:15:20.041+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:16:04.837+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAllCompleted() triggered
-2023-07-01T00:16:16.787+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
-2023-07-01T00:16:42.070+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 403
-2023-07-01T00:17:01.664+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.deleteAll() triggered
-2023-07-01T00:17:08.308+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:17:56.113+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:17:56.148+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:18:07.376+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java öğrenilecek, status=null)
-2023-07-01T00:18:07.383+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java öğrenilecek)
-2023-07-01T00:18:07.401+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:18:21.045+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=css öğrenilecek, status=null)
-2023-07-01T00:18:21.055+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=css öğrenilecek)
-2023-07-01T00:18:21.087+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:18:33.421+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=html öğrenilecek, status=null)
-2023-07-01T00:18:33.428+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=html öğrenilecek)
-2023-07-01T00:18:33.448+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:18:43.056+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=jquery öğrenilecek, status=null)
-2023-07-01T00:18:43.063+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=jquery öğrenilecek)
-2023-07-01T00:18:43.081+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:18:47.428+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:18:48.183+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAllCompleted() triggered
-2023-07-01T00:18:49.398+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
-2023-07-01T00:18:50.743+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
-2023-07-01T00:18:55.418+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 554 and request: TodoRequest(name=java öğrenilecek, status=COMPLETED)
-2023-07-01T00:18:55.430+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java öğrenilecek, status=COMPLETED)
-2023-07-01T00:19:01.259+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 554 and request: TodoRequest(name=java öğrenilecek, status=NOT_COMPLETED)
-2023-07-01T00:19:01.270+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java öğrenilecek, status=NOT_COMPLETED)
-2023-07-01T00:19:11.124+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:19:22.019+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 554 and request: TodoRequest(name=java öğrenilecek, status=COMPLETED)
-2023-07-01T00:19:22.028+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java öğrenilecek, status=COMPLETED)
-2023-07-01T00:19:28.114+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:19:48.536+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 554 and request: TodoRequest(name=java öğrenildi, status=COMPLETED)
-2023-07-01T00:19:48.547+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java öğrenildi, status=COMPLETED)
-2023-07-01T00:19:52.291+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:19:56.443+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 554
-2023-07-01T00:19:56.908+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:19:56.928+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:20:00.034+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:20:04.670+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 555 and request: TodoRequest(name=css öğrenilecek, status=COMPLETED)
-2023-07-01T00:20:04.681+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=css öğrenilecek, status=COMPLETED)
-2023-07-01T00:20:05.628+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 556 and request: TodoRequest(name=html öğrenilecek, status=COMPLETED)
-2023-07-01T00:20:05.637+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=html öğrenilecek, status=COMPLETED)
-2023-07-01T00:20:07.125+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.deleteAllCompleted() triggered
-2023-07-01T00:20:07.145+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:20:09.930+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:20:21.775+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.deleteAll() triggered
-2023-07-01T00:20:21.796+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T00:51:36.582+03:00  WARN 3037 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m52s4ms).
-2023-07-01T01:07:56.929+03:00  WARN 3037 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m50s338ms).
-2023-07-01T01:28:51.121+03:00  WARN 3037 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m24s188ms).
-2023-07-01T01:55:43.955+03:00  WARN 3037 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m52s834ms).
-2023-07-01T02:18:45.736+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T02:18:45.774+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T02:18:51.696+03:00  WARN 3037 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m37s733ms).
-2023-07-01T02:18:57.435+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T02:18:57.443+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java çalış)
-2023-07-01T02:18:57.464+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:13:17.644+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:13:17.696+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:17:57.874+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:02.494+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:02.524+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:16.945+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:20.806+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:20.835+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:38.261+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:18:38.302+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:19:28.200+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:19:28.221+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:19:30.042+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:19:30.071+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:21:48.872+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:21:54.726+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:21:54.744+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:05.869+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:10.215+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:10.250+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:16.049+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:19.010+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:19.040+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:22.564+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:22:50.395+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:23:30.129+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:23:34.021+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:23:34.039+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:23:53.341+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:24:01.379+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:24:22.109+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=react çalış, status=null)
-2023-07-01T03:24:22.118+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=react çalış)
-2023-07-01T03:24:22.145+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:24:37.564+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=html çalış, status=null)
-2023-07-01T03:24:37.570+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=html çalış)
-2023-07-01T03:24:37.588+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:24:44.183+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=css çalış, status=null)
-2023-07-01T03:24:44.188+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=css çalış)
-2023-07-01T03:24:44.209+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:25:54.886+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:26:00.501+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:26:00.519+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:15.863+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:21.516+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:21.537+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:38.852+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:45.468+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:45.499+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:29:51.168+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:34:43.229+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:34:43.266+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:35:31.772+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:35:31.804+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:36:11.296+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:36:11.328+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:36:48.284+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:36:48.309+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:38:01.185+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:38:01.205+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:38:29.948+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:38:29.979+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:41:51.898+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:41:56.202+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:41:56.228+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:42:02.665+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:47:10.891+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:47:10.990+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:50:54.641+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:50:54.660+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:52:20.448+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:20.465+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:21.661+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:21.671+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:22.183+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:22.197+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:22.632+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:22.642+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:38.326+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:38.334+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:39.045+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:39.054+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:40.034+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:40.049+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:52:40.950+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:52:40.960+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T03:56:11.678+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:56:11.702+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T03:57:07.540+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:57:07.573+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:58:13.557+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 559 and request: TodoRequest(name=react çalış, status=COMPLETED)
-2023-07-01T03:58:13.574+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=react çalış, status=COMPLETED)
-2023-07-01T03:58:56.004+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:58:59.338+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:58:59.365+03:00  INFO 3037 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:59:12.242+03:00  INFO 3037 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T03:59:12.277+03:00  INFO 3037 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:02:26.271+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T04:02:26.283+03:00  INFO 3037 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=NOT_COMPLETED)
-2023-07-01T04:02:26.805+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 558 and request: TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T04:02:26.812+03:00  INFO 3037 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=java çalış, status=COMPLETED)
-2023-07-01T04:05:33.824+03:00  INFO 3037 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:05:43.271+03:00  INFO 3037 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:05:43.303+03:00  INFO 3037 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:06:29.081+03:00  INFO 3037 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:06:29.109+03:00  INFO 3037 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:18:34.416+03:00  INFO 3037 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T04:18:34.480+03:00  INFO 3037 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-01T04:18:34.506+03:00  INFO 3037 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-01T04:53:16.388+03:00  INFO 4551 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 4551 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
-2023-07-01T04:53:16.391+03:00  INFO 4551 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-07-01T04:53:16.441+03:00  INFO 4551 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-01T04:53:16.442+03:00  INFO 4551 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-01T04:53:17.374+03:00  INFO 4551 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-01T04:53:17.445+03:00  INFO 4551 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
-2023-07-01T04:53:18.115+03:00  INFO 4551 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-07-01T04:53:18.127+03:00  INFO 4551 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-01T04:53:18.128+03:00  INFO 4551 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-01T04:53:18.195+03:00  INFO 4551 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-01T04:53:18.196+03:00  INFO 4551 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1752 ms
-2023-07-01T04:53:18.230+03:00  INFO 4551 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-01T04:53:18.602+03:00  INFO 4551 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a710611
-2023-07-01T04:53:18.603+03:00  INFO 4551 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-01T04:53:18.613+03:00  INFO 4551 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/todo'
-2023-07-01T04:53:18.754+03:00  INFO 4551 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-01T04:53:18.832+03:00  INFO 4551 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-01T04:53:18.836+03:00  INFO 4551 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-01T04:53:19.030+03:00  INFO 4551 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T04:53:19.215+03:00  INFO 4551 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-01T04:53:19.536+03:00  INFO 4551 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T04:53:20.282+03:00  INFO 4551 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-01T04:53:20.390+03:00  INFO 4551 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T04:53:20.937+03:00  WARN 4551 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-01T04:53:21.675+03:00  INFO 4551 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-01T04:53:21.721+03:00  INFO 4551 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-07-01T04:53:21.734+03:00  INFO 4551 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 6.007 seconds (process running for 6.835)
-2023-07-01T04:53:27.163+03:00  INFO 4551 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-01T04:53:27.164+03:00  INFO 4551 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-01T04:53:27.165+03:00  INFO 4551 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-01T04:53:27.235+03:00  INFO 4551 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:53:27.556+03:00  INFO 4551 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:55:13.580+03:00  INFO 4551 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T04:56:07.114+03:00  INFO 4551 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.deleteAll() triggered
-2023-07-01T04:56:25.472+03:00  INFO 4551 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.deleteAll() triggered
-2023-07-01T04:56:54.955+03:00  INFO 4551 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T05:33:38.710+03:00  INFO 4551 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T05:33:38.729+03:00  INFO 4551 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-01T05:33:38.748+03:00  INFO 4551 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-01T15:45:59.162+03:00  INFO 5440 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 5440 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
-2023-07-01T15:45:59.165+03:00  INFO 5440 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-07-01T15:45:59.217+03:00  INFO 5440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-01T15:45:59.217+03:00  INFO 5440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-01T15:46:00.057+03:00  INFO 5440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-01T15:46:00.122+03:00  INFO 5440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
-2023-07-01T15:46:00.785+03:00  INFO 5440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-07-01T15:46:00.798+03:00  INFO 5440 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-01T15:46:00.798+03:00  INFO 5440 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-01T15:46:00.862+03:00  INFO 5440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-01T15:46:00.863+03:00  INFO 5440 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1645 ms
-2023-07-01T15:46:00.901+03:00  INFO 5440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-01T15:46:01.255+03:00  INFO 5440 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f927e1a
-2023-07-01T15:46:01.257+03:00  INFO 5440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-01T15:46:01.268+03:00  INFO 5440 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/todo'
-2023-07-01T15:46:01.430+03:00  INFO 5440 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-01T15:46:01.507+03:00  INFO 5440 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-01T15:46:01.511+03:00  INFO 5440 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-01T15:46:01.709+03:00  INFO 5440 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T15:46:01.900+03:00  INFO 5440 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-01T15:46:02.229+03:00  INFO 5440 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T15:46:02.971+03:00  INFO 5440 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-01T15:46:03.052+03:00  INFO 5440 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T15:46:03.586+03:00  WARN 5440 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-01T15:46:04.493+03:00  INFO 5440 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-01T15:46:04.550+03:00  INFO 5440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-07-01T15:46:04.569+03:00  INFO 5440 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 5.941 seconds (process running for 7.44)
-2023-07-01T15:46:10.402+03:00  INFO 5440 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-01T15:46:10.403+03:00  INFO 5440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-01T15:46:10.404+03:00  INFO 5440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-01T15:46:10.455+03:00  INFO 5440 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T15:46:10.738+03:00  INFO 5440 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T15:46:24.440+03:00  INFO 5440 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T15:46:24.465+03:00  INFO 5440 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java çalış)
-2023-07-01T15:46:24.549+03:00  INFO 5440 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T15:46:29.484+03:00  INFO 5440 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T15:46:29.492+03:00 ERROR 5440 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T15:46:29.503+03:00 ERROR 5440 --- [http-nio-8080-exec-5] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688215589499, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T15:46:29.508+03:00  WARN 5440 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T15:46:30.454+03:00  INFO 5440 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T15:46:30.459+03:00 ERROR 5440 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T15:46:30.460+03:00 ERROR 5440 --- [http-nio-8080-exec-6] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688215590460, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T15:46:30.461+03:00  WARN 5440 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T15:46:31.412+03:00  INFO 5440 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T15:46:31.417+03:00 ERROR 5440 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T15:46:31.417+03:00 ERROR 5440 --- [http-nio-8080-exec-7] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688215591417, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T15:46:31.418+03:00  WARN 5440 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T15:46:34.405+03:00  INFO 5440 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalışalım, status=null)
-2023-07-01T15:46:34.412+03:00  INFO 5440 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java çalışalım)
-2023-07-01T15:46:34.432+03:00  INFO 5440 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T15:46:42.512+03:00  INFO 5440 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalışalımm, status=null)
-2023-07-01T15:46:42.519+03:00  INFO 5440 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java çalışalımm)
-2023-07-01T15:46:42.538+03:00  INFO 5440 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T15:55:14.188+03:00  INFO 5440 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T15:55:14.208+03:00  INFO 5440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-01T15:55:14.242+03:00  INFO 5440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-01T16:23:23.267+03:00  INFO 5896 --- [main] c.o.todo.TodoApplicationTests            : Starting TodoApplicationTests using Java 17.0.5 with PID 5896 (started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
-2023-07-01T16:23:23.270+03:00  INFO 5896 --- [main] c.o.todo.TodoApplicationTests            : No active profile set, falling back to 1 default profile: "default"
-2023-07-01T16:23:24.125+03:00  INFO 5896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-01T16:23:24.189+03:00  INFO 5896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
-2023-07-01T16:23:24.652+03:00  INFO 5896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-01T16:23:24.728+03:00  INFO 5896 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-01T16:23:24.731+03:00  INFO 5896 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-01T16:23:24.940+03:00  INFO 5896 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T16:23:25.111+03:00  INFO 5896 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-01T16:23:25.133+03:00  INFO 5896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-01T16:23:25.538+03:00  INFO 5896 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@213835b6
-2023-07-01T16:23:25.541+03:00  INFO 5896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-01T16:23:25.859+03:00  INFO 5896 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T16:23:26.564+03:00  INFO 5896 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-01T16:23:26.631+03:00  INFO 5896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T16:23:27.312+03:00  WARN 5896 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-01T16:23:28.449+03:00  INFO 5896 --- [main] c.o.todo.TodoApplicationTests            : Started TodoApplicationTests in 5.676 seconds (process running for 6.819)
-2023-07-01T16:23:29.088+03:00  INFO 5896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T16:23:29.090+03:00  INFO 5896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-01T16:23:29.116+03:00  INFO 5896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-01T16:52:47.961+03:00  INFO 6074 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 6074 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
-2023-07-01T16:52:47.963+03:00  INFO 6074 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-07-01T16:52:48.016+03:00  INFO 6074 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-01T16:52:48.017+03:00  INFO 6074 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-01T16:52:48.878+03:00  INFO 6074 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-01T16:52:48.932+03:00  INFO 6074 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
-2023-07-01T16:52:49.834+03:00  INFO 6074 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-07-01T16:52:49.846+03:00  INFO 6074 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-01T16:52:49.847+03:00  INFO 6074 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-01T16:52:49.914+03:00  INFO 6074 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-01T16:52:49.914+03:00  INFO 6074 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1897 ms
-2023-07-01T16:52:49.949+03:00  INFO 6074 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-01T16:52:50.543+03:00  INFO 6074 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42f102d8
-2023-07-01T16:52:50.545+03:00  INFO 6074 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-01T16:52:50.555+03:00  INFO 6074 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/todo'
-2023-07-01T16:52:50.694+03:00  INFO 6074 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-01T16:52:50.767+03:00  INFO 6074 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-01T16:52:50.771+03:00  INFO 6074 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-01T16:52:51.001+03:00  INFO 6074 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T16:52:51.202+03:00  INFO 6074 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-01T16:52:51.534+03:00  INFO 6074 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T16:52:52.314+03:00  INFO 6074 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-01T16:52:52.396+03:00  INFO 6074 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T16:52:52.970+03:00  WARN 6074 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-01T16:52:53.755+03:00  INFO 6074 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-01T16:52:53.794+03:00  INFO 6074 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-07-01T16:52:53.805+03:00  INFO 6074 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 6.413 seconds (process running for 7.243)
-2023-07-01T16:52:57.934+03:00  INFO 6074 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-01T16:52:57.935+03:00  INFO 6074 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-01T16:52:57.938+03:00  INFO 6074 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-01T16:52:59.240+03:00  WARN 6074 --- [http-nio-8080-exec-6] o.s.core.utils.PropertyResolverUtils     : Could not resolve placeholder 'Spring.application.name' in value "${Spring.application.name}"
-2023-07-01T16:52:59.747+03:00  INFO 6074 --- [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 533 ms
-2023-07-01T16:53:35.461+03:00  INFO 6074 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T16:55:21.719+03:00  INFO 6074 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T16:55:21.745+03:00  INFO 6074 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T16:57:03.837+03:00  INFO 6074 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:03.870+03:00 ERROR 6074 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:03.875+03:00 ERROR 6074 --- [http-nio-8080-exec-6] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219823872, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:03.878+03:00  WARN 6074 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:04.524+03:00  INFO 6074 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:04.529+03:00 ERROR 6074 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:04.530+03:00 ERROR 6074 --- [http-nio-8080-exec-7] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219824530, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:04.531+03:00  WARN 6074 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:05.887+03:00  INFO 6074 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:05.893+03:00 ERROR 6074 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:05.894+03:00 ERROR 6074 --- [http-nio-8080-exec-8] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219825894, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:05.895+03:00  WARN 6074 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:06.375+03:00  INFO 6074 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:06.380+03:00 ERROR 6074 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:06.380+03:00 ERROR 6074 --- [http-nio-8080-exec-5] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219826380, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:06.381+03:00  WARN 6074 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:06.792+03:00  INFO 6074 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:06.796+03:00 ERROR 6074 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:06.797+03:00 ERROR 6074 --- [http-nio-8080-exec-10] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219826797, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:06.797+03:00  WARN 6074 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:07.306+03:00  INFO 6074 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:07.314+03:00 ERROR 6074 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:07.314+03:00 ERROR 6074 --- [http-nio-8080-exec-9] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219827314, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:07.315+03:00  WARN 6074 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:09.674+03:00  INFO 6074 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:09.680+03:00 ERROR 6074 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:09.680+03:00 ERROR 6074 --- [http-nio-8080-exec-4] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219829680, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:09.681+03:00  WARN 6074 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:09.988+03:00  INFO 6074 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:09.993+03:00 ERROR 6074 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:09.993+03:00 ERROR 6074 --- [http-nio-8080-exec-1] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219829993, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:09.994+03:00  WARN 6074 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:10.197+03:00  INFO 6074 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:10.202+03:00 ERROR 6074 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:10.202+03:00 ERROR 6074 --- [http-nio-8080-exec-2] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219830202, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:10.203+03:00  WARN 6074 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:10.398+03:00  INFO 6074 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:10.401+03:00 ERROR 6074 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:10.402+03:00 ERROR 6074 --- [http-nio-8080-exec-3] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219830402, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:10.402+03:00  WARN 6074 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:10.621+03:00  INFO 6074 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:10.626+03:00 ERROR 6074 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:10.626+03:00 ERROR 6074 --- [http-nio-8080-exec-6] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219830626, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:10.627+03:00  WARN 6074 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:10.813+03:00  INFO 6074 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:10.817+03:00 ERROR 6074 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:10.817+03:00 ERROR 6074 --- [http-nio-8080-exec-7] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219830817, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:10.818+03:00  WARN 6074 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:11.005+03:00  INFO 6074 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:11.009+03:00 ERROR 6074 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:11.009+03:00 ERROR 6074 --- [http-nio-8080-exec-8] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219831009, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:11.010+03:00  WARN 6074 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:57:11.164+03:00  INFO 6074 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java çalış, status=null)
-2023-07-01T16:57:11.167+03:00 ERROR 6074 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
-2023-07-01T16:57:11.168+03:00 ERROR 6074 --- [http-nio-8080-exec-5] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688219831168, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
-2023-07-01T16:57:11.168+03:00  WARN 6074 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
-2023-07-01T16:58:15.231+03:00  INFO 6074 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T16:58:15.235+03:00  INFO 6074 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-01T16:58:15.249+03:00  INFO 6074 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-01T17:06:34.047+03:00  INFO 6279 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 6279 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
-2023-07-01T17:06:34.050+03:00  INFO 6279 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-07-01T17:06:34.102+03:00  INFO 6279 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-01T17:06:34.103+03:00  INFO 6279 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-01T17:06:34.915+03:00  INFO 6279 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-01T17:06:34.968+03:00  INFO 6279 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
-2023-07-01T17:06:35.576+03:00  INFO 6279 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-07-01T17:06:35.587+03:00  INFO 6279 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-01T17:06:35.587+03:00  INFO 6279 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-01T17:06:35.652+03:00  INFO 6279 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-01T17:06:35.652+03:00  INFO 6279 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1549 ms
-2023-07-01T17:06:35.689+03:00  INFO 6279 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-01T17:06:36.067+03:00  INFO 6279 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67b56ebf
-2023-07-01T17:06:36.069+03:00  INFO 6279 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-01T17:06:36.081+03:00  INFO 6279 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/todo'
-2023-07-01T17:06:36.235+03:00  INFO 6279 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-01T17:06:36.315+03:00  INFO 6279 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-01T17:06:36.319+03:00  INFO 6279 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-01T17:06:36.513+03:00  INFO 6279 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T17:06:36.710+03:00  INFO 6279 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-01T17:06:37.015+03:00  INFO 6279 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-01T17:06:37.731+03:00  INFO 6279 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-01T17:06:37.813+03:00  INFO 6279 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T17:06:38.357+03:00  WARN 6279 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-01T17:06:39.031+03:00  INFO 6279 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-01T17:06:39.079+03:00  INFO 6279 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-07-01T17:06:39.090+03:00  INFO 6279 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 5.547 seconds (process running for 6.269)
-2023-07-01T17:06:42.800+03:00  INFO 6279 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-01T17:06:42.800+03:00  INFO 6279 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-01T17:06:42.802+03:00  INFO 6279 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-01T17:06:42.841+03:00  INFO 6279 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:06:43.072+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:06:48.348+03:00  INFO 6279 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=ders çalışalım, status=null)
-2023-07-01T17:06:48.378+03:00  INFO 6279 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=ders çalışalım)
-2023-07-01T17:06:48.455+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:45.969+03:00  INFO 6279 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 602
-2023-07-01T17:09:46.319+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:46.339+03:00  INFO 6279 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:47.364+03:00  INFO 6279 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 603
-2023-07-01T17:09:47.577+03:00  INFO 6279 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:47.648+03:00  INFO 6279 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:48.379+03:00  INFO 6279 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 604
-2023-07-01T17:09:48.632+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:48.679+03:00  INFO 6279 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:49.354+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 652
-2023-07-01T17:09:49.502+03:00  INFO 6279 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:09:49.533+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:12:29.890+03:00  INFO 6279 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:12:34.150+03:00  INFO 6279 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:12:34.182+03:00  INFO 6279 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:12:46.910+03:00  INFO 6279 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=React çalışalım, status=null)
-2023-07-01T17:12:46.917+03:00  INFO 6279 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=React çalışalım)
-2023-07-01T17:12:46.936+03:00  INFO 6279 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:12:54.474+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=css çalışalım, status=null)
-2023-07-01T17:12:54.479+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=css çalışalım)
-2023-07-01T17:12:54.498+03:00  INFO 6279 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:18.646+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=vue çalışalım, status=null)
-2023-07-01T17:13:18.652+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=vue çalışalım)
-2023-07-01T17:13:18.672+03:00  INFO 6279 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:23.506+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=yemek yiyelim, status=null)
-2023-07-01T17:13:23.511+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=yemek yiyelim)
-2023-07-01T17:13:23.529+03:00  INFO 6279 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:54.407+03:00  INFO 6279 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 653
-2023-07-01T17:13:54.935+03:00  INFO 6279 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:54.953+03:00  INFO 6279 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:55.644+03:00  INFO 6279 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 654
-2023-07-01T17:13:55.865+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:55.989+03:00  INFO 6279 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:56.547+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 655
-2023-07-01T17:13:56.799+03:00  INFO 6279 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:56.831+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:57.403+03:00  INFO 6279 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 656
-2023-07-01T17:13:57.557+03:00  INFO 6279 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:13:57.573+03:00  INFO 6279 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:14:07.717+03:00  INFO 6279 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=Market alışverişi yap, status=null)
-2023-07-01T17:14:07.722+03:00  INFO 6279 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=Market alışverişi yap)
-2023-07-01T17:14:07.740+03:00  INFO 6279 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:14:14.619+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=Evi temizle, status=null)
-2023-07-01T17:14:14.624+03:00  INFO 6279 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=Evi temizle)
-2023-07-01T17:14:14.642+03:00  INFO 6279 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:14:23.124+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=React çalış, status=null)
-2023-07-01T17:14:23.129+03:00  INFO 6279 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=React çalış)
-2023-07-01T17:14:23.145+03:00  INFO 6279 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:14:32.293+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=Yemek yap, status=null)
-2023-07-01T17:14:32.298+03:00  INFO 6279 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=Yemek yap)
-2023-07-01T17:14:32.315+03:00  INFO 6279 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:18:34.519+03:00  INFO 6279 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:18:34.538+03:00  INFO 6279 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
-2023-07-01T17:23:30.991+03:00  INFO 6279 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-01T17:23:31.005+03:00  INFO 6279 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-01T17:23:31.031+03:00  INFO 6279 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-04T10:13:56.754+03:00  INFO 15166 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 15166 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
+2023-07-04T10:13:56.760+03:00  INFO 15166 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : The following 1 profile is active: "local"
+2023-07-04T10:13:56.805+03:00  INFO 15166 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-04T10:13:56.805+03:00  INFO 15166 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-04T10:13:57.592+03:00  INFO 15166 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-04T10:13:57.650+03:00  INFO 15166 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2023-07-04T10:13:58.262+03:00  INFO 15166 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-04T10:13:58.272+03:00  INFO 15166 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-04T10:13:58.272+03:00  INFO 15166 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-04T10:13:58.338+03:00  INFO 15166 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-04T10:13:58.338+03:00  INFO 15166 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1532 ms
+2023-07-04T10:13:58.499+03:00  INFO 15166 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-04T10:13:58.571+03:00  INFO 15166 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-04T10:13:58.574+03:00  INFO 15166 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-04T10:13:58.744+03:00  INFO 15166 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-04T10:13:58.908+03:00  INFO 15166 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-04T10:13:58.933+03:00  INFO 15166 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-04T10:13:59.378+03:00  INFO 15166 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f3ea1b5
+2023-07-04T10:13:59.381+03:00  INFO 15166 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-04T10:13:59.670+03:00  INFO 15166 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-04T10:14:00.385+03:00  INFO 15166 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-04T10:14:00.457+03:00  INFO 15166 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-04T10:14:01.030+03:00  WARN 15166 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-04T10:14:01.742+03:00  INFO 15166 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-04T10:14:01.785+03:00  INFO 15166 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-04T10:14:01.796+03:00  INFO 15166 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 5.529 seconds (process running for 6.251)
+2023-07-04T10:14:32.331+03:00  INFO 15166 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-04T10:14:32.332+03:00  INFO 15166 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-04T10:14:32.336+03:00  INFO 15166 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-04T10:14:32.392+03:00  INFO 15166 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:14:32.627+03:00  INFO 15166 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:14:49.973+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=html çalış, status=null)
+2023-07-04T10:14:50.005+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=html çalış)
+2023-07-04T10:14:50.094+03:00  INFO 15166 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:14:54.410+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=css çalış, status=null)
+2023-07-04T10:14:54.415+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=css çalış)
+2023-07-04T10:14:54.436+03:00  INFO 15166 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:14:58.661+03:00  INFO 15166 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=reactçalış, status=null)
+2023-07-04T10:14:58.667+03:00  INFO 15166 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=reactçalış)
+2023-07-04T10:14:58.688+03:00  INFO 15166 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:15:56.794+03:00  INFO 15166 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAllCompleted() triggered
+2023-07-04T10:15:58.426+03:00  INFO 15166 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAllCompleted() triggered
+2023-07-04T10:15:59.067+03:00  INFO 15166 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
+2023-07-04T10:16:00.114+03:00  INFO 15166 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:16:14.092+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=angular çalış, status=null)
+2023-07-04T10:16:14.098+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=angular çalış)
+2023-07-04T10:16:14.121+03:00  INFO 15166 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:16:18.139+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 854 and request: TodoRequest(name=reactçalış, status=COMPLETED)
+2023-07-04T10:16:18.158+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=reactçalış, status=COMPLETED)
+2023-07-04T10:16:47.807+03:00  INFO 15166 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 855 and request: TodoRequest(name=angular çalışalım, status=NOT_COMPLETED)
+2023-07-04T10:16:47.818+03:00  INFO 15166 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=angular çalışalım, status=NOT_COMPLETED)
+2023-07-04T10:17:27.505+03:00  INFO 15166 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:17:41.464+03:00  INFO 15166 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=null, status=COMPLETED)
+2023-07-04T10:17:41.480+03:00 ERROR 15166 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TODO veritabaninda bulunamadi
+2023-07-04T10:17:41.490+03:00 ERROR 15166 --- [http-nio-8080-exec-9] o.t.c.u.GlobalControllerExceptionHandler : DomainNotFoundException occurred : ErrorDTO{timestamp=1688455061485, exception='DomainNotFoundException', errors=[ErrorDetailDTO{key='todo.is.not.found', message='Todo bulunamadi', errorCode='Not Found', args=[]}]}
+2023-07-04T10:17:41.496+03:00  WARN 15166 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.DomainNotFoundException: Exception occured todo.is.not.found ]
+2023-07-04T10:18:46.572+03:00  INFO 15166 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=fatura ödenecek, status=NOT_COMPLETED)
+2023-07-04T10:18:46.586+03:00 ERROR 15166 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TODO veritabaninda bulunamadi
+2023-07-04T10:18:46.586+03:00 ERROR 15166 --- [http-nio-8080-exec-2] o.t.c.u.GlobalControllerExceptionHandler : DomainNotFoundException occurred : ErrorDTO{timestamp=1688455126586, exception='DomainNotFoundException', errors=[ErrorDetailDTO{key='todo.is.not.found', message='Todo bulunamadi', errorCode='Not Found', args=[]}]}
+2023-07-04T10:18:46.587+03:00  WARN 15166 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.DomainNotFoundException: Exception occured todo.is.not.found ]
+2023-07-04T10:19:32.231+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=html çalış, status=NOT_COMPLETED)
+2023-07-04T10:19:32.241+03:00 ERROR 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TODO veritabaninda bulunamadi
+2023-07-04T10:19:32.241+03:00 ERROR 15166 --- [http-nio-8080-exec-3] o.t.c.u.GlobalControllerExceptionHandler : DomainNotFoundException occurred : ErrorDTO{timestamp=1688455172241, exception='DomainNotFoundException', errors=[ErrorDetailDTO{key='todo.is.not.found', message='Todo bulunamadi', errorCode='Not Found', args=[]}]}
+2023-07-04T10:19:32.242+03:00  WARN 15166 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.DomainNotFoundException: Exception occured todo.is.not.found ]
+2023-07-04T10:19:42.818+03:00  INFO 15166 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java öğrenilecek, status=NOT_COMPLETED)
+2023-07-04T10:19:42.823+03:00  INFO 15166 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=java öğrenilecek)
+2023-07-04T10:19:47.773+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=java öğrenilecek, status=NOT_COMPLETED)
+2023-07-04T10:19:47.779+03:00 ERROR 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T10:19:47.780+03:00 ERROR 15166 --- [http-nio-8080-exec-5] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688455187780, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T10:19:47.781+03:00  WARN 15166 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T10:20:04.758+03:00  INFO 15166 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 552 and request: TodoRequest(name=html çalış, status=NOT_COMPLETED)
+2023-07-04T10:20:04.769+03:00 ERROR 15166 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TODO veritabaninda bulunamadi
+2023-07-04T10:20:04.770+03:00 ERROR 15166 --- [http-nio-8080-exec-7] o.t.c.u.GlobalControllerExceptionHandler : DomainNotFoundException occurred : ErrorDTO{timestamp=1688455204770, exception='DomainNotFoundException', errors=[ErrorDetailDTO{key='todo.is.not.found', message='Todo bulunamadi', errorCode='Not Found', args=[]}]}
+2023-07-04T10:20:04.771+03:00  WARN 15166 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.DomainNotFoundException: Exception occured todo.is.not.found ]
+2023-07-04T10:20:22.601+03:00  INFO 15166 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 852 and request: TodoRequest(name=html çalış, status=NOT_COMPLETED)
+2023-07-04T10:20:22.614+03:00  INFO 15166 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=html çalış, status=NOT_COMPLETED)
+2023-07-04T10:20:34.968+03:00  INFO 15166 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 852 and request: TodoRequest(name=html çalış, status=NOT_COMPLETED)
+2023-07-04T10:20:34.984+03:00  INFO 15166 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=html çalış, status=NOT_COMPLETED)
+2023-07-04T10:20:48.369+03:00  INFO 15166 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 852 and request: TodoRequest(name=html çalışalım, status=NOT_COMPLETED)
+2023-07-04T10:20:48.387+03:00  INFO 15166 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=html çalışalım, status=NOT_COMPLETED)
+2023-07-04T10:20:59.940+03:00  INFO 15166 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 852 and request: TodoRequest(name=html çalışalım, status=COMPLETED)
+2023-07-04T10:20:59.955+03:00  INFO 15166 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=html çalışalım, status=COMPLETED)
+2023-07-04T10:21:08.208+03:00  INFO 15166 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAllCompleted() triggered
+2023-07-04T10:21:14.170+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
+2023-07-04T10:21:29.544+03:00  INFO 15166 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 852
+2023-07-04T10:21:52.176+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:21:52.209+03:00  INFO 15166 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:22:03.945+03:00  WARN 15166 --- [http-nio-8080-exec-4] o.s.core.utils.PropertyResolverUtils     : Could not resolve placeholder 'Spring.application.name' in value "${Spring.application.name}"
+2023-07-04T10:22:04.233+03:00  INFO 15166 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 301 ms
+2023-07-04T10:22:22.267+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:22:44.804+03:00  INFO 15166 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
+2023-07-04T10:24:05.714+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=vue çalış, status=COMPLETED)
+2023-07-04T10:24:05.733+03:00  INFO 15166 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=vue çalış)
+2023-07-04T10:24:16.766+03:00  INFO 15166 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T10:24:16.787+03:00  INFO 15166 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T11:01:56.231+03:00  WARN 15166 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m26s479ms).
+2023-07-04T11:10:02.045+03:00  INFO 15166 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-04T11:10:02.050+03:00  INFO 15166 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-04T11:10:02.063+03:00  INFO 15166 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-04T13:50:18.080+03:00  INFO 16292 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Starting TodoApplication using Java 17.0.5 with PID 16292 (/Users/oguzhantuncer/git/todo-app/target/classes started by oguzhantuncer in /Users/oguzhantuncer/git/todo-app)
+2023-07-04T13:50:18.084+03:00  INFO 16292 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : The following 1 profile is active: "local"
+2023-07-04T13:50:18.140+03:00  INFO 16292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-04T13:50:18.140+03:00  INFO 16292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-04T13:50:19.033+03:00  INFO 16292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-04T13:50:19.106+03:00  INFO 16292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+2023-07-04T13:50:19.780+03:00  INFO 16292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-04T13:50:19.792+03:00  INFO 16292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-04T13:50:19.793+03:00  INFO 16292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-04T13:50:19.859+03:00  INFO 16292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-04T13:50:19.859+03:00  INFO 16292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1718 ms
+2023-07-04T13:50:20.029+03:00  INFO 16292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-04T13:50:20.109+03:00  INFO 16292 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-04T13:50:20.111+03:00  INFO 16292 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-04T13:50:20.294+03:00  INFO 16292 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-04T13:50:20.466+03:00  INFO 16292 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-04T13:50:20.494+03:00  INFO 16292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-04T13:50:20.877+03:00  INFO 16292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3abbc1ab
+2023-07-04T13:50:20.879+03:00  INFO 16292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-04T13:50:21.236+03:00  INFO 16292 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-04T13:50:21.975+03:00  INFO 16292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-04T13:50:22.068+03:00  INFO 16292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-04T13:50:22.616+03:00  WARN 16292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-04T13:50:23.477+03:00  INFO 16292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-04T13:50:23.527+03:00  INFO 16292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-04T13:50:23.542+03:00  INFO 16292 --- [restartedMain] com.oguzhantuncer.todo.TodoApplication   : Started TodoApplication in 6.068 seconds (process running for 6.914)
+2023-07-04T13:50:42.131+03:00  INFO 16292 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-04T13:50:42.132+03:00  INFO 16292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-04T13:50:42.133+03:00  INFO 16292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-04T13:50:42.213+03:00  INFO 16292 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:50:42.544+03:00  INFO 16292 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:50:55.927+03:00  INFO 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=html çalış, status=null)
+2023-07-04T13:50:55.954+03:00  INFO 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=html çalış)
+2023-07-04T13:50:56.039+03:00  INFO 16292 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:50:59.358+03:00  INFO 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 853 and request: TodoRequest(name=css çalış, status=COMPLETED)
+2023-07-04T13:50:59.378+03:00  INFO 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=css çalış, status=COMPLETED)
+2023-07-04T13:51:16.707+03:00  INFO 16292 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 853
+2023-07-04T13:51:17.158+03:00  INFO 16292 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:51:17.179+03:00  INFO 16292 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:51:20.812+03:00  INFO 16292 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:51:22.930+03:00  INFO 16292 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAllCompleted() triggered
+2023-07-04T13:51:25.100+03:00  INFO 16292 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.findAllNotCompleted() triggered
+2023-07-04T13:51:39.165+03:00  INFO 16292 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 855 and request: TodoRequest(name=angular, status=NOT_COMPLETED)
+2023-07-04T13:51:39.176+03:00  INFO 16292 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=angular, status=NOT_COMPLETED)
+2023-07-04T13:51:47.292+03:00  INFO 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() triggered for this id: 855 and request: TodoRequest(name=angular, status=COMPLETED)
+2023-07-04T13:51:47.303+03:00  INFO 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoService.update() is completed. Updated todo is TodoRequest(name=angular, status=COMPLETED)
+2023-07-04T13:51:48.167+03:00  INFO 16292 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoService.deleteAllCompleted() triggered
+2023-07-04T13:51:48.199+03:00  INFO 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:51:51.128+03:00  INFO 16292 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.deleteAll() triggered
+2023-07-04T13:51:51.155+03:00  INFO 16292 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:52:02.291+03:00  INFO 16292 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=d, status=null)
+2023-07-04T13:52:02.297+03:00  INFO 16292 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=d)
+2023-07-04T13:52:02.318+03:00  INFO 16292 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:52:02.726+03:00  INFO 16292 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=d, status=null)
+2023-07-04T13:52:02.730+03:00 ERROR 16292 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T13:52:02.741+03:00 ERROR 16292 --- [http-nio-8080-exec-10] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688467922736, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T13:52:02.747+03:00  WARN 16292 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T13:52:03.247+03:00  INFO 16292 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=dd, status=null)
+2023-07-04T13:52:03.252+03:00  INFO 16292 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=dd)
+2023-07-04T13:52:03.268+03:00  INFO 16292 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T13:52:03.969+03:00  INFO 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=d, status=null)
+2023-07-04T13:52:03.975+03:00 ERROR 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T13:52:03.976+03:00 ERROR 16292 --- [http-nio-8080-exec-3] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688467923975, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T13:52:03.977+03:00  WARN 16292 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T13:52:04.414+03:00  INFO 16292 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=d, status=null)
+2023-07-04T13:52:04.420+03:00 ERROR 16292 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T13:52:04.421+03:00 ERROR 16292 --- [http-nio-8080-exec-4] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688467924421, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T13:52:04.421+03:00  WARN 16292 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T13:52:05.005+03:00  INFO 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=d, status=null)
+2023-07-04T13:52:05.010+03:00 ERROR 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T13:52:05.010+03:00 ERROR 16292 --- [http-nio-8080-exec-5] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688467925010, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T13:52:05.011+03:00  WARN 16292 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T14:06:42.036+03:00  INFO 16292 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoService.delete() triggered for this id: 903
+2023-07-04T14:06:42.507+03:00  INFO 16292 --- [http-nio-8080-exec-7] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T14:06:42.528+03:00  INFO 16292 --- [http-nio-8080-exec-8] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T14:06:46.801+03:00  INFO 16292 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=dsd, status=null)
+2023-07-04T14:06:46.807+03:00  INFO 16292 --- [http-nio-8080-exec-9] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=dsd)
+2023-07-04T14:06:46.825+03:00  INFO 16292 --- [http-nio-8080-exec-10] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T14:06:47.566+03:00  INFO 16292 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=ds, status=null)
+2023-07-04T14:06:47.576+03:00  INFO 16292 --- [http-nio-8080-exec-1] c.o.todo.service.TodoService             : TodoService.save() is completed. Persisted todo is Todo(id=null, status=NOT_COMPLETED, name=ds)
+2023-07-04T14:06:47.593+03:00  INFO 16292 --- [http-nio-8080-exec-2] c.o.todo.service.TodoService             : TodoService.findAll() triggered
+2023-07-04T14:06:48.241+03:00  INFO 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=ds, status=null)
+2023-07-04T14:06:48.246+03:00 ERROR 16292 --- [http-nio-8080-exec-3] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T14:06:48.247+03:00 ERROR 16292 --- [http-nio-8080-exec-3] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688468808247, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T14:06:48.248+03:00  WARN 16292 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T14:06:48.690+03:00  INFO 16292 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=ds, status=null)
+2023-07-04T14:06:48.694+03:00 ERROR 16292 --- [http-nio-8080-exec-4] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T14:06:48.695+03:00 ERROR 16292 --- [http-nio-8080-exec-4] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688468808695, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T14:06:48.695+03:00  WARN 16292 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T14:06:49.130+03:00  INFO 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=ds, status=null)
+2023-07-04T14:06:49.134+03:00 ERROR 16292 --- [http-nio-8080-exec-5] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T14:06:49.134+03:00 ERROR 16292 --- [http-nio-8080-exec-5] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688468809134, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T14:06:49.135+03:00  WARN 16292 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T14:06:49.355+03:00  INFO 16292 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : TodoSevice.save() triggered for this request: TodoRequest(name=ds, status=null)
+2023-07-04T14:06:49.360+03:00 ERROR 16292 --- [http-nio-8080-exec-6] c.o.todo.service.TodoService             : Kayit edilmek istenilen todo zaten mevcuttur
+2023-07-04T14:06:49.361+03:00 ERROR 16292 --- [http-nio-8080-exec-6] o.t.c.u.GlobalControllerExceptionHandler : BusinessException occurred : ErrorDTO{timestamp=1688468809361, exception='BusinessException', errors=[ErrorDetailDTO{key='todo.is.already.exists', message='Todo zaten mevcut', errorCode='Bad Request', args=[]}]}
+2023-07-04T14:06:49.362+03:00  WARN 16292 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.oguzhantuncer.todo.exception.BusinessException: Exception occured todo.is.already.exists ]
+2023-07-04T14:07:16.444+03:00  INFO 16292 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-04T14:07:16.448+03:00  INFO 16292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-04T14:07:16.465+03:00  INFO 16292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

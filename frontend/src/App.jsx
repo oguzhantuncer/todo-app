@@ -23,28 +23,30 @@ function App() {
     setTodo(event.target.value);
   };
 
-  const addNewTodo = async () => {
-    try {
-      await service.create({name:todo})
-
-      service.getAll()
-        .then(response => {
-          setTodos(response.data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-      setTodo('');
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
   const handleKeyDown = async (event) => {
     if (event.key === 'Enter') {
       addNewTodo();
     }
   }
+
+// Buttonların fonksiyonları
+
+const addNewTodo = async () => {
+  try {
+    await service.create({name:todo})
+
+    service.getAll()
+      .then(response => {
+        setTodos(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+    setTodo('');
+  } catch (error) {
+    console.error(error);
+  }
+}
 
   const handleDeleteCompletedButton = async () => {
     try {
